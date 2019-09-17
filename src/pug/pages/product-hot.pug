@@ -1,0 +1,57 @@
+include ../utils/mixins
+// product-hot
+article.product-hot
+    .container
+        h1.title__item Sản phẩm bán chạy
+        // product-back
+        .product__back
+            img(src="../dist/images/arrow-left.png", alt="arrow-left" class="product__arrow-left")
+        // product-list
+        .product__list
+            // product hot item 1
+            +product(
+                "product__item",
+                    "",
+                    "../dist/images/product-new-1.jpg",
+                    "Rượu vang Đà Lạt",
+                    "370.000", "đ",
+                    "450.000", "đ",
+                    "#",
+                    "Add to cart"
+            )
+            // product hot item 2
+            +product(
+            "product__item",
+                "",
+                "../dist/images/product-new-1.jpg",
+                "Rượu vang Đà Lạt",
+                "370.000", "đ",
+                "450.000", "đ",
+                "#",
+                "Add to cart"
+            )
+            // product hot item 3
+            +product(
+                "product__item",
+                    "",
+                    "../dist/images/product-new-1.jpg",
+                    "Rượu vang Đà Lạt",
+                    "370.000", "đ",
+                    "450.000", "đ",
+                    "#",
+                    "Add to cart"
+            )
+            // product hot item 4
+            +product(
+            "product__item",
+                "",
+                "../dist/images/product-new-1.jpg",
+                "Rượu vang Đà Lạt",
+                "370.000", "đ",
+                "450.000", "đ",
+                "#",
+                "Add to cart"
+            )
+        // product-next
+        .product__next
+            img(src="../dist/images/arrow-right.png", alt="arrow-right" class="product__arrow-right")
