@@ -1,0 +1,13 @@
+include ../../utils/mixins
+// menu
+nav.menu
+    img(src="../dist/images/logo.png", alt="logo" class="menu__logo")
+    +menu(
+        ["Trang chủ", "Rượu vang đỏ", "Rượu vang trắng", "Champagne", "Thông tin", "Blog", "Liên hệ"],
+        "menu__list",
+        "menu__item",
+        "#"
+    )(class= "menu__link")
+
+
+

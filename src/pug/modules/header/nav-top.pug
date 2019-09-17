@@ -1,0 +1,16 @@
+include ../../utils/mixins
+//nav-top
+.menu-top
+    +menu(
+        ["Tài khoản của tôi", "Trạng thái đơn hàng", "Danh sách ưa thích", "Giỏ hàng", "Đăng nhập", "Đăng ký"],
+        "menu-top__list",
+        "menu-top__item",
+        "#"
+    )(class= "menu-top__link")
+    //search
+    .search
+        input(type="search" class="search__input" placeholder="Tìm kiếm ở đây")
+        img(src="../dist/images/icon-search.png", alt="search" class="search__img")
+
+
+
