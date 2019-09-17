@@ -1,0 +1,100 @@
+include vars
+
+mixin menu(list, ulClass, liClass, href)
+    - var menuName= list
+    ul(class= ulClass)
+        each val in menuName
+            li(class= liClass)
+                a(href= href)&attributes(attributes)= val
+
+mixin slide(vine, type, since)
+    h1.slide__vine= vine
+    h3.slide__type= type
+    p.slide__since= since
+
+mixin products(list, status)
+    - var productList= list
+    each val, key in productList
+        if(status== "yes")
+            .product__item
+                img.product__status(src= val.status, alt="status")
+                .product__container-img
+                    img.product__image(src= val.img, alt="img")
+                    .product__hover
+                        .product__hover-1
+                            img(src="../dist/images/icon-love.png", alt="icon love" class="product__image-hover")
+                            span.product__info-hover  Yêu thích
+                        .product__hover-2
+                            img(src="../dist/images/icon-compare.png", alt="icon compare" class="product__image-hover")
+                            span.product__info-hover  So sánh
+                        .product__hover-2
+                            img(src="../dist/images/icon-arrow-compare.png", alt="icon button" class="product__image--hover")
+                h1.product__title= val.name
+                p.product__price.product__discount= val.price
+                    |
+                    sup.product__unit= val.unit
+                    |  - 
+                    span.product__price-origin= val.origin
+                        sup.product__unit= val.unit
+                |
+                |
+                a.product__link(href= val.url)&attributes(attributes)= val.button
+        else 
+            .product__item
+                .product__container-img
+                    img.product__image(src= val.img, alt="img")
+                    .product__hover
+                        .product__hover-1
+                            img(src="../dist/images/icon-love.png", alt="icon love" class="product__image-hover")
+                            span.product__info-hover  Yêu thích
+                        .product__hover-2
+                            img(src="../dist/images/icon-compare.png", alt="icon compare" class="product__image-hover")
+                            span.product__info-hover  So sánh
+                        .product__hover-2
+                            img(src="../dist/images/icon-arrow-compare.png", alt="icon button" class="product__image--hover")
+                h1.product__title= val.name
+                p.product__price.product__discount= val.price
+                    |
+                    sup.product__unit= val.unit
+                    |  - 
+                    span.product__price-origin= val.origin
+                        sup.product__unit= val.unit
+                |
+                |
+                a.product__link(href= val.url)&attributes(attributes)= val.button
+
+mixin productGrid(src, alt, title)
+    .product__grid-item
+        - var listImg= src
+        each val in listImg
+            |
+            |
+            img.product__grid-img(src= val, alt= alt)
+            img.product__grid-title(src= title)
+
+mixin blog(src, alt, title, author, date, comment, description, link)
+    .blog__item
+        .blog__container-img
+            img.blog__img(src= src, alt= alt)
+        h1.blog__title= title
+        p.blog__author= author
+            span.blog__date= date
+            span.blog__commet= commet
+        p.blog__description= description
+        a.blog__link= link
+
+mixin footerMenu(title, list, href)
+    h1.footer__title= title
+    .footer__menu
+        ul.footer__menu-list
+        - var menuFooter= list
+        each val in menuFooter
+            li.footer__menu-item
+                a.footer__menu-link(href= href)&attributes(attributes)= val
+//- mixin icon(name,mod)
+//- 	if(mod)
+//- 		svg(class="svg-sprite-icon icon-" + name + ' ' + mod)
+//- 			use(xlink:href="static/images/svg/symbol/sprite.svg#" + name)
+//- 	else
+//- 		svg(class="svg-sprite-icon icon-" + name)
+//- 			use(xlink:href="static/images/svg/symbol/sprite.svg#" + name)
