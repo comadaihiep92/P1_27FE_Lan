@@ -1,0 +1,25 @@
+include ../utils/mixins
+// product-new
+article.product-new
+    .container
+        h1.title__item Sản phẩm mới
+        // product-back
+        .product__back
+            img(src="../dist/images/arrow-left.png", alt="arrow-left" class="product__arrow-left")
+        // product-list
+        .product__list
+            // product new item 1
+            +products(
+                productHot
+            )
+        //product-next
+        .product__next
+            img(src="../dist/images/arrow-right.png", alt="arrow-right" class="product__arrow-right")
+    // product-grid
+    .product__grid
+        .product__grid-list
+            +productGrid(
+                [ "../dist/images/grid-1.jpg", "../dist/images/grid-2.jpg", "../dist/images/grid-3.jpg", "../dist/images/grid-4.jpg", "../dist/images/grid-5.jpg", "../dist/images/grid-6.jpg", "../dist/images/grid-7.jpg", "../dist/images/grid-8.jpg" ],
+                "alt",
+                "../dist/images/text-grid.png"
+            )
