@@ -16,11 +16,12 @@ $breakpoints: (
   "tablet-small": 640px,
   "tablet"      : 768px,
   "tablet-wide" : 1024px,
+  "destop-1"    : 1140px,
   "desktop"     : 1248px,
   "desktop-wide": 1440px
 );
 
-$content-size: 1024px;
+$content-size: 1140px;
 
 $width-100: 100%;
 
@@ -29,3 +30,4 @@ $font-primary: 'Times-New-Roman', sans-serif;
 $font-head: 'UTM-Aquarelle', sans-serif;
 $font-head2: 'UVF-Didot', sans-serif;
 $font-head3: 'Lobster-Regular', sans-serif;
+$font-sale: 'UTM-Caviar', sans-serif;

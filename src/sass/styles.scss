@@ -53,6 +53,33 @@ button { outline: none; }
   width: 100%;
 }
 
+.title__item {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 2.1rem;
+  color: $color-black;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  &::after {
+    content: url(../images/border-bottom.png);
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.button__click {
+  display: inline-block;
+  padding: 10px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  background: $color-black;
+  color: $color-white;
+  margin-top: 30px;
+}
+
 //Modules
 @import "modules/modules";
 // @import "utils/fonts";
