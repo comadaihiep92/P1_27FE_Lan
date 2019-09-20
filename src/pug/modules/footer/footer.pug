@@ -22,9 +22,10 @@ footer.footer
                 h1.footer__title Gửi email
                 .footer__menu
                     p.footer__description Gửi email cho chúng tôi để được hộ trở
-                    .footer__email
-                        input(type="email" placeholder="Enter your email" class="footer__input-email")
-                        a(href="#" class="footer__link") Gửi
+                    .footer__input
+                        .footer__email
+                            input(type="email" placeholder="Enter your email" class="footer__input-email")
+                            a(href="#" class="footer__link") Gửi
                     .footer__social
                         img(src="../dist/images/icon-twitter.png", alt="twitter" class="footer__social-link")
                         img(src="../dist/images/icon-g+.png", alt="g+" class="footer__social-link")
@@ -34,18 +35,24 @@ footer.footer
             // footer item 4
             .footer__item
                 h1.footer__title Liên hệ
-                img(src="../dist/images/icon-address.png", alt="addres")
-                span Tầng 4, Tòa nhà Hanoi Group Số 442 Đội Cấn,
-                    br
-                    | P. Cống Vị, Q. Ba Đình, Hà Nội
-                br
-                img(src="../dist/images/icon-fax.png", alt="fax")
-                span (04) 6674 2332 - 
-                    img(src="../dist/images/icon-fax.png", alt="fax")
-                    span (04) 3786 8904
-                br
-                img(src="../dist/images/icon-phone.png", alt="phone")
-                span (04) 6674 2332 - 
-                    img(src="../dist/images/icon-email.png", alt="email")
-                    span (04) 3786 8904
-                            
+                .footer__menu
+                    .footer__contact
+                        .footer__contact-des
+                            img(src="../dist/images/icon-address.png", class="footer__contact-img" alt="addres")
+                            span Tầng 4, Tòa nhà Hanoi Group Số 442 Đội Cấn,
+                            br
+                            | P. Cống Vị, Q. Ba Đình, Hà Nội
+                        .footer__contact-des
+                            img(src="../dist/images/icon-fax.png", class="footer__contact-img" alt="fax")
+                            span (04) 6674 2332 - 
+                                img(src="../dist/images/icon-fax.png", class="footer__contact-img" alt="fax")
+                                span (04) 3786 8904
+                        .footer__contact-des
+                            img(src="../dist/images/icon-phone.png", class="footer__contact-img" alt="phone")
+                            span (04) 6674 2332 - 
+                                img(src="../dist/images/icon-email.png", class="footer__contact-img" alt="email")
+                                span.des-email  Support@bizweb.vn
+                
+        .footer__copyright
+            p.footer__copyright-text © Copyright 2008-2014 DKT Technology JSC
+            img(src="../dist/images/pay-mastercard.png", alt="payment")     
