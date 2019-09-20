@@ -1,0 +1,101 @@
+// product
+
+.product {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__list {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+    }
+    &__item {
+        width: 100%;
+        height: 450px;
+        padding: 10px;
+        &:not(:first-child) {
+            margin-left: 30px
+        }
+        &:hover .product__hover {
+            visibility: visible;
+        }
+        &:hover .button__click {
+            background: $color-yellow;
+        }
+        &:hover .product__title {
+            color: $color-yellow;
+        }
+    }
+    &__hover {
+        display: flex;
+        width: 100%;
+        height: 25px;
+        background: black;
+        color: white;
+        justify-content: space-around;
+        align-items: center;
+        visibility: hidden;
+        &-img {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__info-hover {
+        margin-left: 10px;
+        font-size: 14px;
+        color: $color-gray;  
+    }
+    &__container-1 {
+        position: relative;
+        width: 100%;
+        margin-right: 30px;    
+    }
+    &__status {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }&__container-img {
+        width: 100%;
+        height: 270px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__image {
+        max-width: 100%;
+        height: 270px;
+    }
+    &__title {
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-black;
+        text-transform: uppercase;
+        margin-top: 25px;
+    }
+    &__price {
+        font-family: $font-sale;
+        color: $color-yellow;
+        font-size: 21px;
+    }
+    &__price-origin {
+        font-family: $font-sale;
+        color: $color-gray;
+        font-size: 14px;
+        text-decoration: line-through;
+    }
+    &__description {
+        margin-top: 27px;
+        color: $color-gray;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    & .button__click {
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+}
+
