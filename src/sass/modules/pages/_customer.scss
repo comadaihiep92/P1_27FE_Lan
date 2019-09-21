@@ -1,0 +1,60 @@
+// customer
+
+.customer__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.customer__image {
+    width: 63px;
+    height: 63px;
+    background: #d29e41;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.customer__img {
+    max-width: 100%;
+}
+
+.customer__user-img {
+    margin: 30px 0 20px 0;
+}
+
+.customer__user {
+    font-size: 14px;
+    color: #212121;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.customer__info {
+    font-size: 12px;
+    color: #a7a7a7;
+    font-style: italic;
+    margin-bottom: 35px;
+}
+
+.customer__tab {
+    display: flex;
+    justify-content: center;
+}
+
+.customer__tab a {
+    &::after {
+        content: "\2022";
+        color: $color-yellow;
+        font-weight: bold;
+        display: inline-block;
+        padding: 0 4px;
+        font-size: 20px;
+    }
+    
+}
+
