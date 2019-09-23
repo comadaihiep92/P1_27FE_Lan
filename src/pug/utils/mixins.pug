@@ -1,11 +1,19 @@
 include vars
 
-mixin menu(list, ulClass, liClass, href)
+mixin menu(list, ulClass, liClass, href, dropdown)
     - var menuName= list
-    ul(class= ulClass)
-        each val in menuName
-            li(class= liClass)
-                a(href= href)&attributes(attributes)= val
+    if dropdown== "yes"
+        ul(class= ulClass)
+            each val, key in menuName
+                li(class= liClass)
+                    a(href= href)&attributes(attributes)= val
+            +dropdownMenu
+    else
+        ul(class= ulClass)
+            each val, key in menuName
+                li(class= liClass)
+                    a(href= href)&attributes(attributes)= val
+
 
 mixin slide(vine, type, since)
     h1.slide__vine= vine
@@ -84,9 +92,10 @@ mixin blog(src, alt, title, author, date, comment, description, link)
         .blog__container-img
             img.blog__img(src= src, alt= alt)
         h1.blog__title= title
-        p.blog__author= author
-            span.blog__date= date
-            span.blog__commet= commet
+        .blog__info
+            p.blog__author= author
+            p.blog__date= date
+            p.blog__comment= comment
         p.blog__description= description
         a.blog__link= link
 
@@ -98,3 +107,69 @@ mixin footerMenu(title, list, href)
         each val in menuFooter
             li.footer__menu-item
                 a.footer__menu-link(href= href)&attributes(attributes)= val
+
+//- mixin menu(list, ulClass, liClass, href, dropdown)
+//-     - var menuName= list
+//-     ul(class= ulClass)
+//-         each val, key in menuName
+//-             //- if dropdown== "yes" && key> 0 && key< 4
+//-             if dropdown== "yes" && key== 1
+//-                 li(class= liClass)
+//-                     a(href= href)&attributes(attributes)= val
+//-                 +dropdownMenu
+//-             else 
+//-                 li(class= liClass)
+//-                     a(href= href)&attributes(attributes)= val
+
+mixin dropdownMenu
+    .dropmenu__content
+        .dropmenu__list
+            .dropmenu__item
+                h1.dropmenu__title Rượu ngoại
+                ul.dropmenu__container
+                    li
+                        a(href="#").dropmenu__link Rượu Chivas
+                    li
+                        a(href="#").dropmenu__link Hàng độc - Rượu độc đáo
+                    li
+                        a(href="#").dropmenu__link Johnnie Walker
+                    li
+                        a(href="#").dropmenu__link Rượu Whisky 
+                    li
+                        a(href="#").dropmenu__link Rượu Remy Martin
+                    li
+                        a(href="#").dropmenu__link Rượu Glenmorangie
+            .dropmenu__item
+                h1.dropmenu__title Rượu vang
+                ul.dropmenu__container
+                    li
+                        a(href="#").dropmenu__link Rượu Chivas
+                    li
+                        a(href="#").dropmenu__link Hàng độc - Rượu độc đáo
+                    li
+                        a(href="#").dropmenu__link Johnnie Walker
+                    li
+                        a(href="#").dropmenu__link Rượu Whisky 
+                    li
+                        a(href="#").dropmenu__link Rượu Remy Martin
+                    li
+                        a(href="#").dropmenu__link Rượu Glenmorangie
+            .dropmenu__item
+                h1.dropmenu__title Rượu ngoại 1
+                ul.dropmenu__container
+                    li
+                        a(href="#").dropmenu__link Rượu Chivas
+                    li
+                        a(href="#").dropmenu__link Hàng độc - Rượu độc đáo
+                    li
+                        a(href="#").dropmenu__link Johnnie Walker
+                    li
+                        a(href="#").dropmenu__link Rượu Whisky 
+                    li
+                        a(href="#").dropmenu__link Rượu Remy Martin
+                    li
+                        a(href="#").dropmenu__link Rượu Glenmorangie
+            .dropmenu__item
+                .dropmenu__container-image
+                    img(src="../dist/images/grid-6.jpg", class="dropmenu__image" alt="img")
+
