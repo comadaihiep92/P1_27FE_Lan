@@ -23,7 +23,7 @@
         height: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 2fr 1fr;
+        grid-template-rows: 2fr 30px 1fr;
         align-items: center;
         justify-items: center;
         // &:not(:first-child) {
@@ -114,4 +114,8 @@
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
+}
+
+.product__description {
+    display: none;
 }

@@ -1,0 +1,234 @@
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+
+.product__banner {
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/banner-product-head.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    margin-bottom: 40px;
+}
+
+.product__sort {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    grid-template-rows: 1fr;
+}
+
+.sort__list {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 627px 120px 200px 537px;
+    grid-row-gap: 50px;
+}
+
+.sort__item {
+    width: 100%;
+    height: 100%;
+    & .product__title {
+        margin-top: 0;
+        font-size: 24px;
+        &:first-child::after {
+            content: url(../images/border-bottom-2.png);
+            display: block;
+        }
+    }
+}
+
+.sort--margin {
+    padding: 25px 0 40px 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+}
+
+.sort__wine-link, .tag__link, .sort-des {
+    font-size: 14px;
+    color: #818181;
+}
+
+.sort__wine-title {
+    font-size: 14px;
+    color: #818181;
+    text-transform: uppercase;
+}
+.sort__wine {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+}
+
+
+.sort__wine-link {
+    &:hover {
+        color: #e6ae48;
+    }
+}
+
+.sort__tag {
+    display: block;
+}
+
+.tag__link {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 10px 10px 0 0;
+    border: 1px solid #e6e6e6;
+}
+
+.active {
+    background: #e6ae48;
+    color: $color-white;
+}
+
+.sort__image {
+    width: 263px;
+    height: 539px;
+    background-image: url(../images/banner-product-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.sort__product {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 36px 1fr;
+}
+
+.sort__button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+}
+
+.sort__button-left {
+    display: flex;
+    & input {
+        display: none;
+    }
+    & label {
+        cursor: pointer;
+    }
+}
+
+.cbTab {
+    margin-right: 10px;
+    
+}
+
+.soft__button-right {
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pagination {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    & .actives {
+        color: #f26522;
+    }
+    & a {
+        font-size: 18px;
+        color: #c1c1c1;
+        &:hover {
+            color: #f26522;
+        }
+    }
+}
+
+.list-col {
+    display: none;
+}
+
+.list-row {
+    width: 100%;
+    height: 100%;
+    @include displayGrid(
+        1fr,
+        1fr,
+        50px 15px,
+        center,
+        center
+    );
+    & .product__hover {
+        visibility: visible;
+        background: none;
+    }
+    & .product__title {
+        font-size: 25px;
+    }
+
+    & .product__description {
+        display: block;
+    }
+    & .product__price {
+        margin-top: 20px;
+    }
+
+    & .product__price-origin {
+        visibility: hidden;
+    }
+    & .product__item {
+        width: 100%;
+        height: 345px;
+        @include displayGrid(
+            1fr 2fr,
+            1fr,
+            0,
+            center,
+            center
+        );
+        position: relative;
+        &:not(:last-child)::after {
+            position: absolute;
+            bottom: 0;
+            border: 1px solid #e6e6e6;
+            content: "";
+            width: 100%;
+            margin: -25px;
+        }
+    }
+    & .product__container-2 {
+        width: 100%;
+        height: 100%;
+        @include displayFlexTwo(
+            column,
+            flex-start,
+            flex-start,
+            nowrap
+        )
+    }
+    
+}
+
+.product__link-love {
+    width: 100%;
+    height: 100%;
+    @include displayGrid(
+        1fr 2fr 1fr,
+        30px,
+        0,
+        center,
+        start
+    );
+    margin-top: 30px;
+}

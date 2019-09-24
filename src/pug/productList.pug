@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+	- var title = 'Product list'
+	- var pageClass = 'product-list-page'
+
+block append header
+	include modules/header/slide
+
+block content
+	include pages/product-list
+	include pages/brand
