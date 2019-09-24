@@ -1,0 +1,115 @@
+include ../utils/mixins
+
+article.product__detail
+    .container
+        .page__index
+            ul
+                li
+                    a(href="#") Trang chủ
+                li
+                    a(href="#") Sản phẩm
+                li
+                    a(href="#") Rượu vang đỏ
+        .detail__container
+            .detail__head
+                .detail__choose
+                    // product-next
+                    .product__back
+                        img(src="../dist/images/arrow-left.png", alt="arrow-left" class="product__arrow-left")
+                    // product-list
+                    .detail__choose-list
+                        .detail__choose-item
+                            .detail__choose-image
+                                img(src="../dist/images/product-new-1.jpg", class="detail__choose-img" alt="img detail")
+                        .detail__choose-item
+                            .detail__choose-image
+                                img(src="../dist/images/product-new-1.jpg", class="detail__choose-img"  alt="img detail")
+                        .detail__choose-item
+                            .detail__choose-image
+                                img(src="../dist/images/product-new-1.jpg", class="detail__choose-img"  alt="img detail")
+                        .detail__choose-item
+                            .detail__choose-image
+                                img(src="../dist/images/product-new-1.jpg", class="detail__choose-img"  alt="img detail")
+                        .detail__choose-item
+                            .detail__choose-image
+                                img(src="../dist/images/product-new-1.jpg", class="detail__choose-img"  alt="img detail")
+                    // product-next
+                    .product__next
+                        img(src="../dist/images/arrow-right.png", alt="arrow-right" class="product__arrow-right")
+                .detail__image-large
+                    .product__image-large
+                            .product__container-img
+                                img(src="../dist/images/product-intro.jpg", alt="product-intro" class="product__image")
+                .detail__right
+                    h1.product__title Rượu nho năm 1987
+                    h3.product__price 330.000
+                        sup.product__unit đ
+                    .detail__item
+                        .product__review
+                            img(src="../dist/images/icon-star-review.png", class="product__review-star" alt="review")
+                            p.product__review-count 1 Review (S)
+                            a.product__review-add Add your review
+                    .detail__item
+                        h1.product__detail-title Màu sắc
+                        .product__color-list
+                            .product__color-item
+                                img(src="../dist/images/color-yellow.png", class=".product__color-img" alt="color")
+                            .product__color-item
+                                img(src="../dist/images/color-black.png", class=".product__color-img" alt="color")    
+                            .product__color-item
+                                img(src="../dist/images/color-red.png", class=".product__color-img" alt="color")
+                    .detail__item
+                        h1.product__detail-title Kich cỡ
+                        .product__size
+                            select
+                                option(value="0") Loại to
+                                option(value="1") Loại vừa
+                                option(value="2") Loại nhỏ
+                    .detail__item
+                        h1.product__detail-title Số lượng
+                        .product__quantity
+                            .product__quantity-item
+                                input(type="button" value="-" class="sub")
+                                input(type="number" value="1" name="quantity" class="quantity")
+                                input(type="button" value="+" class="add")
+                            a.button__click Add to cart
+                    .detail__item
+                        .product__love
+                            .product__love-img
+                                img(src="../dist/images/icon-love.png", alt="icon love" class="product__image-hover")
+                                a(href="#").product__info-hover  Yêu thích
+                            .product__love-img
+                                img(src="../dist/images/icon-compare.png", alt="icon compare" class="product__image-hover")
+                                a(href="#").product__info-hover  So sánh
+                            .product__love-img
+                                img(src="../dist/images/icon-email.png", alt="icon button" class="product__image--hover")
+                                a(href="#").product__info-hover Email
+                    .detail__item
+                        h1.product__detail-title Mô tả
+                        p.product__description Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ 
+                            | ôxy hoá của protein béo.
+                    .detail__item
+                        .product__social
+                            img(src="../dist/images/icon-social.jpg", class=".product__social-img" alt="color")
+        .detail__tab
+            .detail__tab-list
+                .detail__tab-left
+                    .detail__tab-head
+                        input(type="radio" checked name="tab" id="tab1" )
+                        label(for="tab1" class="detail__tab-title") Đặc điểm nổi bật
+                        input(type="radio" name="tab" id="tab2")
+                        label(for="tab2" class="detail__tab-title") Thông tin sản phẩm
+                        input(type="radio" name="tab" id="tab3" )
+                        label(for="tab3" class="detail__tab-title") Đánh giá 
+                    
+                        .detail_tab-item
+                            p.detail__tab-description Đừng nghĩ rằng chỉ vì đôi chân to mà bạn không thể mặc được món đồ nào khác ngoài quần dài. Sau đây là  những item vừa trendy lại vừa có tác dụng rất hiệu quả trong việc điều chỉnh đôi chân to của bạn.Mùa hè là mùa của những bộ cánh thoải mái, thoáng mát và hẳn cô gái nào cũng muốn khoe chân tối đa. Tuy nhiên, điều này lại không hề dễ dàng đối với những cô nàng sở hữu đôi chân to.Đừng nghĩ rằng chỉ vì đôi chân to mà bạn không thể mặc được món đồ nào khác ngoài quần dài. Sau đây là những item vừa trendy lại vừa có tác dụng rất hiệu quả trong việc điều chỉnh đôi chân to của bạn. Mùa hè là mùa của những bộ cánh thoải mái, thoáng mát và hẳn cô gái nào cũng muốn khoe chân tối đa. Tuy nhiên, điều này lại không hề dễ dàng đối với những cô nàng sở hữu đôi chân to. Vậy diện đồ thế nào để vừa tạo cảm giác nhẹ nhàng nhưng lại khéo léo giấu được nhược điểm ấy? Sau đây, húng tôi xin đưa ra gợi ý về loạt item mà các cô nàng chân to nên gắn bó trong mùa hè này.
+                        .detail_tab-item
+                            p.detail__tab-description Chân to mà bạn không thể mặc được món đồ nào khác ngoài quần dài. Sau đây là  những item vừa trendy lại vừa có tác dụng rất hiệu quả trong việc điều chỉnh đôi chân to của bạn.Mùa hè là mùa của những bộ cánh thoải mái, thoáng mát và hẳn cô gái nào cũng muốn khoe chân tối đa. Tuy nhiên, điều này lại không hề dễ dàng đối với những cô nàng sở hữu đôi chân to.Đừng nghĩ rằng chỉ vì đôi chân to mà bạn không thể mặc được món đồ nào khác ngoài quần dài. Sau đây là những item vừa trendy lại vừa có tác dụng rất hiệu quả trong việc điều chỉnh đôi chân to của bạn. Mùa hè là mùa của những bộ cánh thoải mái, thoáng mát và hẳn cô gái nào cũng muốn khoe chân tối đa. Tuy nhiên, điều này lại không hề dễ dàng đối với những cô nàng sở hữu đôi chân to. Vậy diện đồ thế nào để vừa tạo cảm giác nhẹ nhàng nhưng lại khéo léo giấu được nhược điểm ấy? Sau đây, húng tôi xin đưa ra gợi ý về loạt item mà các cô nàng chân to nên gắn bó trong mùa hè này.
+                        .detail_tab-item
+                            p.detail__tab-description Không thể mặc được món đồ nào khác ngoài quần dài. Sau đây là  những item vừa trendy lại vừa có tác dụng rất hiệu quả trong việc điều chỉnh đôi chân to của bạn.Mùa hè là mùa của những bộ cánh thoải mái, thoáng mát và hẳn cô gái nào cũng muốn khoe chân tối đa. Tuy nhiên, điều này lại không hề dễ dàng đối với những cô nàng sở hữu đôi chân to.Đừng nghĩ rằng chỉ vì đôi chân to mà bạn không thể mặc được món đồ nào khác ngoài quần dài. Sau đây là những item vừa trendy lại vừa có tác dụng rất hiệu quả trong việc điều chỉnh đôi chân to của bạn. Mùa hè là mùa của những bộ cánh thoải mái, thoáng mát và hẳn cô gái nào cũng muốn khoe chân tối đa. Tuy nhiên, điều này lại không hề dễ dàng đối với những cô nàng sở hữu đôi chân to. Vậy diện đồ thế nào để vừa tạo cảm giác nhẹ nhàng nhưng lại khéo léo giấu được nhược điểm ấy? Sau đây, húng tôi xin đưa ra gợi ý về loạt item mà các cô nàng chân to nên gắn bó trong mùa hè này.
+                .none
+                .detail__tab-image
+                        img(src="../dist/images/grid-6.jpg", class="detail__tab-img" alt="img")
+
+                    

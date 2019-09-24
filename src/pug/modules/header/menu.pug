@@ -3,10 +3,9 @@ include ../../utils/mixins
 nav.menu
     img(src="../dist/images/logo.png", alt="logo" class="menu__logo")
     +menu(
-        ["Trang chủ", "Rượu vang đỏ", "Rượu vang trắng", "Champagne", "Thông tin", "Blog", "Liên hệ"],
+         {"#1": "Trang chủ", "#2": "Rượu vang đỏ", "#3": "Rượu vang trắng", "#4": "Champagne", "#5": "Thông tin", "#6": "Blog", "#7": "Liên hệ" },
         "menu__list",
         "menu__item",
-        "#",
         "yes"
     )(class= "menu__link")
     

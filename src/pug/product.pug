@@ -1,7 +1,13 @@
 extends template/main
 
 block variables
-	- var title = 'Hello'
+	- var title = 'Product'
 	- var pageClass = 'product-page'
 
+block append header
+	include modules/header/slide
+
 block content
+	include pages/product-detail
+	include pages/product-hot
+	include pages/brand
