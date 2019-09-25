@@ -1,0 +1,26 @@
+// product cart
+include ../utils/mixins
+
+article.product__array-cart
+    .container
+        +pageIndex(
+            wineRed
+        )
+        .product__cart
+            h1.product__title.arrow Giỏ hàng
+            .cart__list
+                .cart__item
+                        p.cart__title Ảnh
+                        p.cart__title Tên sản phẩm
+                        p.cart__title Giá
+                        p.cart__title Số lượng
+                        p.cart__title Tổng số
+                        p.cart__title Xóa
+                +productCard(
+                    productCart
+                )
+            .cart__button
+                a(href="#" class="button__continue button__click") Tiếp tục mua hàng
+                a(href="#" class="button__delete button__click") Tiếp tục mua hàng
+                a(href="#" class="button__update button__click") Tiếp tục mua hàng  
+                                

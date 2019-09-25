@@ -1,0 +1,40 @@
+// intro post
+
+.intro__post {
+    width: 100%;
+    height: 100%;
+}
+
+.intro__post-list {
+    @include displayGrid(
+        5fr 7fr,
+        310px,
+        30px,
+        start,
+        start
+    );
+    margin-top: 30px;
+}
+
+.intro__post-image {
+    width: 458px;
+    height: 308px;
+}
+
+.intro__img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.intro__post-content {
+    width: 100%;
+    height: 100%;
+}
+
+.intro__title {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #303030;
+}

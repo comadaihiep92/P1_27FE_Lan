@@ -19,8 +19,8 @@
 }
 
 .blog__item {
-    width: 362px;
-    height: 222px;
+    width: 100%;
+    height: 100%;
     &:first-child {
         margin-right: 30px;
     }
@@ -28,13 +28,42 @@
 
 .blog__container-img {
     width: 100%;
-    height: 100%;
+    height: 220px;
+    position: relative;
+    &:hover .blog__hover {
+        visibility: visible;
+    }
 }
+
+.blog__hover {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 220px solid rgba(217, 221, 216, 0.4);
+    border-left: 360px solid transparent;
+    visibility: hidden;
+}
+
+.blog__hover-img {
+    position: absolute;
+    top: 90px;
+    right: 160px;
+    display: block;
+    background-color: white;
+    border: 20px solid white;
+    border-radius: 50%;
+}
+
 
 .blog__img {
     max-width: 100%;
     width: 100%;
     height: 100%;
+    position: relative;
+    z-index: -99;
+    cursor: pointer;
+    
 }
 
 .blog__title {
@@ -42,6 +71,9 @@
     text-transform: uppercase;
     color: #303030;
     margin-top: 25px;
+    &:hover {
+        color: $color-yellow;
+    }
 }
 
 .blog__info {

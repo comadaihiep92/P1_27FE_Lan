@@ -1,0 +1,16 @@
+include ../utils/mixins
+// blog
+article.blog-page
+    .container
+        +pageIndex(
+                wineRed
+        )
+        h1.product__title.arrow Giới thiệu
+        .blog__list
+            // blog item 1
+            +blog(
+                blog
+            )
+
+
+

@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title><!--[if IE]>
+    <title>Product Cart</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
     <link rel="stylesheet" type="text/css" href="../dist/css/styles.css"><!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
   </head>
-  <body>
+  <body class="product-cart-page">
     <div class="wrapper">
       <header class="header">
         <div class="slide__background"></div>
@@ -30,6 +30,12 @@
             <div class="search">
               <input class="search__input" type="search" placeholder="Tìm kiếm ở đây"><img class="search__img" src="../dist/images/icon-search.png" alt="search">
             </div>
+          </div>
+          <!--slide-->
+          <div class="slide">
+                      <h1 class="slide__vine">Rượu</h1>
+                      <h3 class="slide__type">Vang đỏ</h3>
+                      <p class="slide__since">Since 1980</p>
           </div>
           <!-- menu-->
           <nav class="menu"><img class="menu__logo" src="../dist/images/logo.png" alt="logo">
@@ -86,6 +92,78 @@
         </div>
       </header>
       <section class="content">
+        <!-- product cart-->
+        <article class="product__array-cart">
+          <div class="container">
+                    <div class="page__index">
+                      <ul>
+                        <li><a href="#1">Trang chủ</a></li>
+                        <li><a href="#2">Sản phẩm</a></li>
+                        <li><a href="#3">Rượu vang đỏ</a></li>
+                      </ul>
+                    </div>
+            <div class="product__cart">
+              <h1 class="product__title arrow">Giỏ hàng</h1>
+              <div class="cart__list">
+                <div class="cart__item">
+                  <p class="cart__title">Ảnh</p>
+                  <p class="cart__title">Tên sản phẩm</p>
+                  <p class="cart__title">Giá</p>
+                  <p class="cart__title">Số lượng</p>
+                  <p class="cart__title">Tổng số</p>
+                  <p class="cart__title">Xóa</p>
+                </div>
+                        <div class="cart__right">
+                          <div class="product__container-img"><img class="product__image" src="../dist/images/product-new-1.jpg" alt="img"></div>
+                          <div class="product__container-2">
+                            <h1 class="product__title line">Rượu vang Đà Lạt</h1>
+                            <p class="product__price product__discount line">345.000<sup class="product__unit">đ</sup></p>
+                            <input class="cart__quantity line" type="text" value="1" name="quantity">
+                            <p class="product__price product__discount line">345.000<sup class="product__unit">đ</sup></p><img class="product__delete line" src="../dist/images/icon-delete.png" alt="img delete">
+                          </div>
+                        </div>
+                        <div class="cart__right">
+                          <div class="product__container-img"><img class="product__image" src="../dist/images/product-new-2.jpg" alt="img"></div>
+                          <div class="product__container-2">
+                            <h1 class="product__title line">Rượu vang Đà Lạt</h1>
+                            <p class="product__price product__discount line">400.000<sup class="product__unit">đ</sup></p>
+                            <input class="cart__quantity line" type="text" value="1" name="quantity">
+                            <p class="product__price product__discount line">345.000<sup class="product__unit">đ</sup></p><img class="product__delete line" src="../dist/images/icon-delete.png" alt="img delete">
+                          </div>
+                        </div>
+                        <div class="cart__right">
+                          <div class="product__container-img"><img class="product__image" src="../dist/images/product-new-1.jpg" alt="img"></div>
+                          <div class="product__container-2">
+                            <h1 class="product__title line">Rượu vang Đà Lạt</h1>
+                            <p class="product__price product__discount line">345.000<sup class="product__unit">đ</sup></p>
+                            <input class="cart__quantity line" type="text" value="1" name="quantity">
+                            <p class="product__price product__discount line">345.000<sup class="product__unit">đ</sup></p><img class="product__delete line" src="../dist/images/icon-delete.png" alt="img delete">
+                          </div>
+                        </div>
+                        <div class="cart__right">
+                          <div class="product__container-img"><img class="product__image" src="../dist/images/product-new-2.jpg" alt="img"></div>
+                          <div class="product__container-2">
+                            <h1 class="product__title line">Rượu vang Đà Lạt</h1>
+                            <p class="product__price product__discount line">400.000<sup class="product__unit">đ</sup></p>
+                            <input class="cart__quantity line" type="text" value="1" name="quantity">
+                            <p class="product__price product__discount line">345.000<sup class="product__unit">đ</sup></p><img class="product__delete line" src="../dist/images/icon-delete.png" alt="img delete">
+                          </div>
+                        </div>
+              </div>
+              <div class="cart__button"><a class="button__continue button__click" href="#">Tiếp tục mua hàng</a><a class="button__delete button__click" href="#">Tiếp tục mua hàng</a><a class="button__update button__click" href="#">Tiếp tục mua hàng  </a></div>
+            </div>
+          </div>
+        </article>
+        <!-- brand-->
+        <article class="brand">
+          <div class="container">
+            <div class="brand__list">
+              <div class="brand__item"><img class="brand__image" src="../dist/images/brand-1.jpg" alt="brand"></div>
+              <div class="brand__item"><img class="brand__image" src="../dist/images/brand-2.jpg" alt="brand"></div>
+              <div class="brand__item"><img class="brand__image" src="../dist/images/brand-3.jpg" alt="brand"></div>
+            </div>
+          </div>
+        </article>
       </section>
       <!-- footer-->
       <footer class="footer">
