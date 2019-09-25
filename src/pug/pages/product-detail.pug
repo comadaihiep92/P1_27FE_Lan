@@ -2,14 +2,9 @@ include ../utils/mixins
 
 article.product__detail
     .container
-        .page__index
-            ul
-                li
-                    a(href="#") Trang chủ
-                li
-                    a(href="#") Sản phẩm
-                li
-                    a(href="#") Rượu vang đỏ
+        +pageIndex(
+            wineRed
+        )
         .detail__container
             .detail__head
                 .detail__choose

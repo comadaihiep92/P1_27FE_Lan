@@ -20,7 +20,7 @@ mixin slide(vine, type, since)
     h3.slide__type= type
     p.slide__since= since
 
-mixin products(list, status)
+mixin products(list, status, col)
     - var productList= list
     each val, key in productList
         if(status== "yes")
@@ -30,16 +30,16 @@ mixin products(list, status)
                     .product__container-img
                         a(href="#")
                             img.product__image(src= val.img, alt="img")
-                    .product__hover
-                        .product__hover-img
-                            img(src="../dist/images/icon-love.png", alt="icon love" class="product__image-hover")
-                            a(href="#").product__info-hover Yêu thích
-                        .product__hover-img
-                            img(src="../dist/images/icon-compare.png", alt="icon compare" class="product__image-hover")
-                            a(href="#").product__info-hover  So sánh
-                        .product__hover-img
-                            a(href="#").product__info-hover
-                                img(src="../dist/images/icon-arrow-compare.png", alt="icon button" class="product__image--hover")
+                .product__hover
+                    .product__hover-img
+                        img(src="../dist/images/icon-love.png", alt="icon love" class="product__image-hover")
+                        a(href="#").product__info-hover Yêu thích
+                    .product__hover-img
+                        img(src="../dist/images/icon-compare.png", alt="icon compare" class="product__image-hover")
+                        a(href="#").product__info-hover  So sánh
+                    .product__hover-img
+                        a(href="#").product__info-hover
+                            img(src="../dist/images/icon-arrow-compare.png", alt="icon button" class="product__image--hover")
                 .product__container-2
                     h1.product__title= val.name
                     p.product__price.product__discount= val.price
@@ -48,15 +48,44 @@ mixin products(list, status)
                         |  - 
                         span.product__price-origin= val.origin
                             sup.product__unit= val.unit
+                    p.product__description= val.des       
                     |
                     |
                     a.button__click(href= val.url)&attributes(attributes)= val.button
         else 
-            .product__item
-                .product__container-1
-                    .product__container-img
-                        a(href="#")
-                            img.product__image(src= val.img, alt="img")
+            if(col== "col")
+                .product__item
+                    .product__container-1
+                        .product__container-img
+                            a(href="#")
+                                img.product__image(src= val.img, alt="img")
+                    
+                    .product__container-2
+                        h1.product__title= val.name
+                        p.product__price.product__discount= val.price
+                            |
+                            sup.product__unit= val.unit
+                            | 
+                            span.product__price-origin=  - val.origin
+                                sup.product__unit= val.unit
+                        p.product__description= val.des
+                        |
+                        |
+                        .product__link-love
+                            a.button__click(href= val.url)&attributes(attributes)= val.button
+                            .product__hover
+                                .product__hover-img
+                                    img(src="../dist/images/icon-love.png", alt="icon love" class="product__image-hover")
+                                    a(href="#").product__info-hover  Yêu thích
+                                .product__hover-img
+                                    img(src="../dist/images/icon-compare.png", alt="icon compare" class="product__image-hover")
+                                    a(href="#").product__info-hover  So sánh
+            else   
+                .product__item
+                    .product__container-1
+                        .product__container-img
+                            a(href="#")
+                                img.product__image(src= val.img, alt="img")
                     .product__hover
                         .product__hover-img
                             img(src="../dist/images/icon-love.png", alt="icon love" class="product__image-hover")
@@ -67,17 +96,18 @@ mixin products(list, status)
                         .product__hover-img
                             a(href="#").product__info-hover
                                 img(src="../dist/images/icon-arrow-compare.png", alt="icon button" class="product__image--hover")
-                .product__container-2
-                    h1.product__title= val.name
-                    p.product__price.product__discount= val.price
-                        |
-                        sup.product__unit= val.unit
-                        |  - 
-                        span.product__price-origin= val.origin
+                    .product__container-2
+                        h1.product__title= val.name
+                        p.product__price.product__discount= val.price
+                            |
                             sup.product__unit= val.unit
-                    |
-                    |
-                    a.button__click(href= val.url)&attributes(attributes)= val.button
+                            |  - 
+                            span.product__price-origin= val.origin
+                                sup.product__unit= val.unit
+                        p.product__description= val.des
+                        |
+                        |
+                        a.button__click(href= val.url)&attributes(attributes)= val.button
 
 mixin productGrid(src, alt, title)
         - var listImg= src
@@ -185,3 +215,17 @@ mixin dropdownMenu
                 .dropmenu__container-image
                     img(src="../dist/images/grid-6.jpg", class="dropmenu__image" alt="img")
 
+
+mixin pageIndex(list)
+    - var listIndex= list
+    .page__index
+        ul
+            each val, key in listIndex
+                li
+                    a(href= key)&attributes(attributes)= val
+
+
+mixin listMenuLeft(list)
+    - var listMenuWine= list
+    each val, key in listMenuWine
+        a.sort__wine-link(href= key)&attributes(attributes)= val

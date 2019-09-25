@@ -1,0 +1,81 @@
+// product list
+include ../utils/mixins
+
+article.product__array-list
+    .container
+        +pageIndex(
+            wineRed
+        )
+        .product__banner
+        .product__sort
+            .sort__list
+                .sort__item
+                    h1.product__title Danh mục sản phẩm
+                    .sort--margin.sort__wine
+                        h1.sort__wine-title RƯỢU NGOẠI
+                        +listMenuLeft(
+                            menuListWine
+                        )
+                        h1.sort__wine-title RƯỢU VANG
+                        +listMenuLeft(
+                            menuListWineTwo
+                        )
+                .sort__item
+                    h1.product__title So sánh sản phẩm
+                    .sort--margin.sort__compare
+                        p.sort-des Bạn chưa có sản phẩm nào để so sánh    
+                .sort__item
+                    h1.product__title Tag sản phẩm
+                    .sort--margin.sort__tag
+                        a.active(href="#" class="tag__link") Đồng hồ
+                        a(href="#" class="tag__link") Túi
+                        a(href="#" class="tag__link") Phụ kiện
+                        a(href="#" class="tag__link") Giày
+                        a(href="#" class="tag__link") Sandal
+                        a(href="#" class="tag__link") Áo sơ mi
+                        a(href="#" class="tag__link") Nước hoa
+                        a(href="#" class="tag__link") Trẻ em
+                        a(href="#" class="tag__link") Thời trang nữ
+                .sort__item
+                    .sort__image
+            .sort__product
+                .sort__button
+                    .sort__button-left
+                        .cbTab
+                            input(type="radio" checked name="tabCb" id="cb1")
+                            label(for="cb1" class="cb")
+                                img(src="../dist/images/icon-list-col.png")
+                        .cbTab
+                            input(type="radio" name="tabCb" id="cb2" )
+                            label(for="cb2" class="cb")
+                                img(src="../dist/images/icon-list-row.png")
+                    .soft__button-right
+                        .pagination
+                            a(href="#") &#9666;
+                            a(href="#") 1
+                            a(href="#" class="actives") 2
+                            a(href="#") 3
+                            a(href="#") 4
+                            a(href="#") &#9656;
+                .product__list.list-col
+                    // product new item 1
+                    +products(
+                        productHot
+                    )
+                    +products(
+                        productHot
+                    )
+                    +products(
+                        productHot
+                    )
+                    +products(
+                        productHot
+                    )
+                .product__list.list-row
+                    // product new item 1
+                    +products(
+                        productHot,
+                        "",
+                        "col"
+                    )
+                    

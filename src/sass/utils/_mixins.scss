@@ -39,3 +39,20 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin displayGrid ($col, $row, $gap, $align, $justify) {
+  display: grid;
+  grid-template-columns: $col;
+  grid-template-rows: $row;
+  grid-gap: $gap;
+  align-items: $align;
+  justify-items: $justify;
+}
+
+@mixin displayFlexTwo($dir, $align, $justify, $wrap) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: $align;
+  justify-content: $justify;
+  flex-wrap: $wrap;
+}
