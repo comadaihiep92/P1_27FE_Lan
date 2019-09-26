@@ -28,8 +28,7 @@ mixin products(list, status, col)
                 .product__container-1
                     img.product__status(src= val.status, alt="status")
                     .product__container-img
-                        a(href="#")
-                            img.product__image(src= val.img, alt="img")
+                        img.product__image(src= val.img, alt="img")
                 .product__hover
                     .product__hover-img
                         img(src="../dist/images/icon-love.png", alt="icon love" class="product__image-hover")
@@ -57,8 +56,7 @@ mixin products(list, status, col)
                 .product__item
                     .product__container-1
                         .product__container-img
-                            a(href="#")
-                                img.product__image(src= val.img, alt="img")
+                            img.product__image(src= val.img, alt="img")
                     
                     .product__container-2
                         h1.product__title= val.name
@@ -84,8 +82,7 @@ mixin products(list, status, col)
                 .product__item
                     .product__container-1
                         .product__container-img
-                            a(href="#")
-                                img.product__image(src= val.img, alt="img")
+                            img.product__image(src= val.img, alt="img")
                     .product__hover
                         .product__hover-img
                             img(src="../dist/images/icon-love.png", alt="icon love" class="product__image-hover")
@@ -117,17 +114,22 @@ mixin productGrid(src, alt, title)
                 .product__grid-link
                     img.product__grid-title(src= title)
 
-mixin blog(src, alt, title, author, date, comment, description, link)
-    .blog__item
-        .blog__container-img
-            img.blog__img(src= src, alt= alt)
-        h1.blog__title= title
-        .blog__info
-            p.blog__author= author
-            p.blog__date= date
-            p.blog__comment= comment
-        p.blog__description= description
-        a.blog__link= link
+mixin blog(list)
+    - var listBlog= list
+    each val, key in listBlog
+        .blog__item
+            .blog__container-img
+                img.blog__img(src= val.img, alt= "img")
+                .blog__hover
+                    img(src="../dist/images/icon-link.png", class="blog__hover-img" alt="hover")
+            .blog__content
+                h1.blog__title= val.name
+                .blog__info
+                    p.blog__author= val.author
+                    p.blog__date= val.date
+                    p.blog__comment= val.comment
+                p.blog__description= val.description
+                a.blog__link(href= val.link) Read more
 
 mixin footerMenu(title, list, href)
     h1.footer__title= title
@@ -229,3 +231,32 @@ mixin listMenuLeft(list)
     - var listMenuWine= list
     each val, key in listMenuWine
         a.sort__wine-link(href= key)&attributes(attributes)= val
+
+mixin productCard(list)
+    - var productList= list
+        each val, key in productList
+            .cart__right
+                .product__container-img
+                    img.product__image(src= val.img, alt="img")
+                .product__container-2
+                    h1.product__title.line= val.name
+                    p.product__price.product__discount.line= val.price
+                        |
+                        sup.product__unit= val.unit
+                    input(type="text" value= val.quantity name="quantity" class="cart__quantity line")
+                    p.product__price.product__discount.line= val.sum
+                        |
+                        sup.product__unit= val.unit
+                    img.product__delete.line(src= "../dist/images/icon-delete.png", alt="img delete")
+
+
+mixin blogComment(list)
+    - var listComment= list
+    each val, key in listComment
+        .comment__item
+            .comment__info
+                p.comment__author= val.author
+                p.comment__time= val.time
+                a.button__reply Trả lời
+            .comment__content
+                p.comment__text= val.comment

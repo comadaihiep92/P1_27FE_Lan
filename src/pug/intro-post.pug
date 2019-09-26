@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+	- var title = 'Intro post'
+	- var pageClass = 'intro-post-page'
+
+block append header
+	include modules/header/slide
+
+block content
+	include pages/intro-post
+	include pages/brand

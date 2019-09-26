@@ -1,0 +1,70 @@
+// product list
+include ../utils/mixins
+
+article.post
+    .container
+        +pageIndex(
+            wineRed
+        )
+        .post__content
+            .post__left
+                .post__item
+                    h1.product__title Bài viết mới nhất
+                    .blog__list
+                        // blog item 1
+                        +blog(
+                            blogLeft
+                        )
+                .post__item
+                    h1.product__title Blog tag
+                    .sort--margin.sort__tag
+                        a.active(href="#" class="tag__link") Đồng hồ
+                        a(href="#" class="tag__link") Túi
+                        a(href="#" class="tag__link") Phụ kiện
+                        a(href="#" class="tag__link") Giày
+                        a(href="#" class="tag__link") Sandal
+                        a(href="#" class="tag__link") Áo sơ mi
+                        a(href="#" class="tag__link") Nước hoa
+                        a(href="#" class="tag__link") Trẻ em
+                        a(href="#" class="tag__link") Thời trang nữ
+                .post__item
+                    h1.product__title Latest video
+                    .sort__image
+            .post__right
+                .blog__list
+                    // blog item 1
+                    +blog(
+                        blogPost
+                    )
+                .contact
+                    h1.contact__title.text Đóng góp ý kiến
+                    form(action="#" class="contact__list")
+                        .contact__item
+                            label(for="id" class="contact__label text") Tên
+                                sup.aterisk *
+                            input(type="text" name="name" id="id" class="contact__input")
+                        .contact__item
+                            label(for="email" class="contact__label text") Email
+                                sup.aterisk *
+                            input(type="text" name="name" id="email" class="contact__input")
+                        .contact__item
+                            label(for="comment" class="contact__label text") Ý kiến
+                                sup.aterisk *
+                            input(type="text" name="name" id="comment" class="contact__input")
+                        .contact__item
+                            label
+                            input(type="submit" value="Gửi ý kiến" class="button__submit")
+                .comment
+                    h1.comment__title Bình luận(3)    
+                    +blogComment(
+                        blogComment
+                    )
+                .pagination
+                    a(href="#" class="pagination__link") &#9666;
+                    a(href="#" class="pagination__link") 1
+                    a(href="#" class="actives" class="pagination__link") 2
+                    a(href="#" class="pagination__link") 3
+                    a(href="#" class="pagination__link") 4
+                    a(href="#" class="pagination__link") &#9656;                       
+ 
+                    
