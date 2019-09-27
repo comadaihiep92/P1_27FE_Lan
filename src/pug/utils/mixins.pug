@@ -235,18 +235,23 @@ mixin listMenuLeft(list)
 mixin productCard(list)
     - var productList= list
         each val, key in productList
-            .cart__right
-                .product__container-img
-                    img.product__image(src= val.img, alt="img")
-                .product__container-2
+            .cart__item
+                .cart__container
+                    .product__container-img
+                        img.product__image(src= val.img, alt="img")
+                .cart__container
                     h1.product__title.line= val.name
+                .cart__container
                     p.product__price.product__discount.line= val.price
                         |
                         sup.product__unit= val.unit
+                .cart__container
                     input(type="text" value= val.quantity name="quantity" class="cart__quantity line")
+                .cart__container
                     p.product__price.product__discount.line= val.sum
                         |
                         sup.product__unit= val.unit
+                .cart__container
                     img.product__delete.line(src= "../dist/images/icon-delete.png", alt="img delete")
 
 
@@ -260,3 +265,140 @@ mixin blogComment(list)
                 a.button__reply Trả lời
             .comment__content
                 p.comment__text= val.comment
+
+mixin order(list)
+    - var orderList= list
+        each val, key in orderList
+            .cart__container
+                p.item__title= val.index
+            .cart__container
+                p.item__title= val.bill
+                //- p= val.time
+            .cart__container
+                p.item__title= val.warehouse
+            .cart__container
+                p.item__title= val.quantity
+            .cart__container
+                p.item__title= val.sum
+                    |
+                    span đ
+            .cart__container
+                p.item__title= val.status
+            .cart__container
+                p.item__title= val.detail
+
+mixin orderButton(list)
+    - var listButton= list
+    each val, key in listButton
+        a.order__link(href= key)&attributes(attributes)= val
+
+
+mixin blog2(list)
+    - var listBlog= list
+    - var count = 0
+    - var n = 3
+    each val, key in listBlog
+        case n
+            when 'all'
+                .blog__item
+                    .blog__container-img
+                        img.blog__img(src= val.img, alt= "img")
+                        .blog__hover
+                            img(src="../dist/images/icon-link.png", class="blog__hover-img" alt="hover")
+                    .blog__content
+                        h1.blog__title= val.name
+                        .blog__info
+                            p.blog__author= val.author
+                            p.blog__date= val.date
+                            p.blog__comment= val.comment
+                        p.blog__description= val.description
+                        a.blog__link(href= val.link) Read more
+            default
+                - if(key < n)
+                    - key = count
+                        .blog__item
+                            .blog__container-img
+                                img.blog__img(src= val.img, alt= "img")
+                                .blog__hover
+                                    img(src="../dist/images/icon-link.png", class="blog__hover-img" alt="hover")
+                            .blog__content
+                                h1.blog__title= val.name
+                                .blog__info
+                                    p.blog__author= val.author
+                                    p.blog__date= val.date
+                                    p.blog__comment= val.comment
+                                p.blog__description= val.description
+                                a.blog__link(href= val.link) Read more
+                - count++
+
+
+
+mixin addressPerson(list, button)
+    - var addressList= list
+    each val, key in addressList
+        if button== "yes"
+            .contact__item
+                .contact__input
+                    label(for="firstname" class="contact__label") Tên
+                    input(type="text" id="firstname" value= val.firstname class="login__input-text")
+                .contact__input
+                    label(for="lastname" class="contact__label") Họ & tên đệm
+                    input(type="text" id="lastname" value= val.lastname class="login__input-text")
+                .contact__input
+                    label(for="company" class="contact__label") Công ty
+                    input(type="text" id="company" value= val.company class="login__input-text")
+                .contact__input
+                    label(for="address" class="contact__label") Địa chỉ
+                    input(type="text" id="address" value= val.address class="login__input-text")
+                .contact__input
+                    label(for="city" class="contact__label") Thành phố
+                    input(type="text" id="city" value= val.city class="login__input-text")
+                .contact__input
+                    label(for="nationality" class="contact__label") Quốc tịch
+                    input(type="text" id="nationality" value= val.nationality class="login__input-text")
+                .contact__input
+                    label(for="zipcode" class="contact__label") Postal/Zip Code
+                    input(type="emmail" id="zipcode" value= val.zipcode class="login__input-text")
+                .contact__input
+                    label(for="phone" class="contact__label") Phone
+                    input(type="text" id="phone" value= val.phone class="login__input-text")
+                .contact__input
+                    label
+                    .forgot__passs
+                        input(type="checkbox" name="forgot-pass" class="login__forgot-pass")
+                        label(for="#" class="login__forgot-text") Đặt làm địa chỉ mặc định
+                .contact__input
+                    label
+                    .contact__button
+                        input(type="submit" value="Chỉnh sửa địa chỉ" class="button__click button__edit")
+                        input(type="submit" value="Xóa" class="button__click button__delete")
+        else   
+            .contact__item
+                .contact__input
+                    label(for="firstname" class="contact__label") Tên
+                    label(class="contact__label")= val.firstname
+                .contact__input
+                    label(for="lastname" class="contact__label") Họ & tên đệm
+                    label(class="contact__label")= val.lastname
+                .contact__input
+                    label(for="company" class="contact__label") Công ty
+                    label(class="contact__label")= val.company
+                .contact__input
+                    label(for="address" class="contact__label") Địa chỉ
+                    label(class="contact__label")= val.address
+                .contact__input
+                    label(for="city" class="contact__label") Thành phố
+                    label(class="contact__label")= val.city
+                .contact__input
+                    label(for="nationality" class="contact__label") Quốc tịch
+                    label(class="contact__label")= val.nationality
+                .contact__input
+                    label(for="subject" class="contact__label") Postal/Zip Code
+                    label(class="contact__label")= val.zipcode
+                .contact__input
+                    label(for="phone" class="contact__label") Phone
+                    label(class="contact__label")= val.phone
+                .contact__input
+                    label
+                    .address__edit
+                        a(class="login__forgot-text button__edit-blue") Chỉnh sửa địa chỉ 

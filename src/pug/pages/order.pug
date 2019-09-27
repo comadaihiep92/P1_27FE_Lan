@@ -1,0 +1,54 @@
+// product cart
+include ../utils/mixins
+
+article.order
+    .container
+        +pageIndex(
+            wineRed
+        )
+        
+        h1.product__title.arrow Đơn hàng
+        .order__content
+            .order__list
+                .order__head
+                    h1.order__title Danh sách đơn hàng
+                    .order__function
+                        +orderButton(
+                            orderTitle
+                        )
+                .order__item
+                    .cart__container
+                        p.cart__title SST
+                    .cart__container
+                        p.cart__title Mã hóa đơn/Ngày mua hàng
+                    .cart__container
+                        p.cart__title Kho nhận hàng
+                    .cart__container
+                        p.cart__title Số sp
+                    .cart__container
+                        p.cart__title Tổng tiền
+                    .cart__container
+                        p.cart__title Tình trạng
+                    .cart__container
+                        p.cart__title Thao tác
+                .order__item
+                    +order(
+                        orderList
+                    )
+            .order__right
+                h1.order__title Thông tin khách hàng
+                .item
+                    img(src="../dist/images/icon-person.png", alt="")
+                    p.item__title GiangLe
+                        br
+                        | Leanhgian89@gmail.com
+                .item
+                    img(src="../dist/images/icon-address.png", alt="")
+                    p.item__title Tòa nhà Hà Nội Group
+                        br
+                        | 442 Đội Cấn, Ba Đình Hà Nội
+                .item
+                    img(src="../dist/images/icon-phone.png", alt="")
+                    p.item__title (04) 3786 8904
+                a.address__link(href="#") Chi tiết địa chỉ
+                                

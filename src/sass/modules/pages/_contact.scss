@@ -1,0 +1,94 @@
+// contact
+
+.contact {
+    width: 100%;
+    height: auto;
+
+}
+
+.contact__content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+}
+
+.contact__left {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 1fr;
+    grid-row-gap: 60px;
+}
+
+.contact__item {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 30px 30px 160px;
+    grid-gap: 20px;
+}
+
+.contact__input {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+}
+
+.messsage {
+    height: 160px;
+}
+
+.contact__button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.button__contact {
+    padding: 10px 20px;
+}
+
+.contact__label {
+    font-size: 1.4rem;
+    color: #666666;
+    font-style: normal;
+}
+
+.contact__right {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 135px 105px 70px;
+    grid-row-gap: 30px;
+
+    & .item__title{
+        color: #666666;
+    }
+}
+
+.row-follow {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-row-gap: 10px;
+}
+
+.item__follow {
+    color: #606060;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 200;
+}

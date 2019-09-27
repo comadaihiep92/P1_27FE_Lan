@@ -1,0 +1,70 @@
+// login
+.login__content {
+    width: 100%;
+    height: 100%;
+
+}
+
+.login__top {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: inherit;
+    grid-column-gap: 70%;
+}
+
+.login__form {
+    width: 100%;
+    height: 415px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-row-gap: 30px;
+    padding: 45px 55px;
+    border: 1px solid #e9e9e9;
+}
+
+.login__input {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+}
+
+.forgot__passs {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.login__input-text {
+    height: 30px;
+    font-size: 1.4rem;
+    padding-right: 5px;
+    border: 1px solid #e9e9e9;
+}
+
+.login__forgot-text {
+    font-size: 1.4rem;
+    margin-left: 10px;
+}
+
+.login__title-text{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: $color-black;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.login__description {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+}

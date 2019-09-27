@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Blog</title><!--[if IE]>
+    <title>Đăng nhập</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
     <link rel="stylesheet" type="text/css" href="../dist/css/styles.css"><!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
   </head>
-  <body class="blog-page">
+  <body class="login-page">
     <div class="wrapper">
       <header class="header">
         <div class="slide__background"></div>
@@ -92,8 +92,8 @@
         </div>
       </header>
       <section class="content">
-        <!-- blog-->
-        <article class="blog-page">
+        <!-- login-->
+        <article class="login">
           <div class="container">
                     <div class="page__index">
                       <ul>
@@ -102,51 +102,35 @@
                         <li><a href="#3">Rượu vang đỏ</a></li>
                       </ul>
                     </div>
-            <h1 class="product__title arrow">Giới thiệu</h1>
-            <div class="blog__list">
-              <!-- blog item 1-->
-                      <div class="blog__item">
-                        <div class="blog__container-img"><img class="blog__img" src="../dist/images/blog-1.jpg" alt="img">
-                          <div class="blog__hover"><img class="blog__hover-img" src="../dist/images/icon-link.png" alt="hover"></div>
-                        </div>
-                        <div class="blog__content">
-                          <h1 class="blog__title">Vang thang long classic</h1>
-                          <div class="blog__info">
-                            <p class="blog__author">Đăng bởi Giangle</p>
-                            <p class="blog__date">30/06/2015</p>
-                            <p class="blog__comment">60 bình luận</p>
-                          </div>
-                          <p class="blog__description">Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...</p><a class="blog__link" href="#">Read more</a>
-                        </div>
-                      </div>
-                      <div class="blog__item">
-                        <div class="blog__container-img"><img class="blog__img" src="../dist/images/blog-1.jpg" alt="img">
-                          <div class="blog__hover"><img class="blog__hover-img" src="../dist/images/icon-link.png" alt="hover"></div>
-                        </div>
-                        <div class="blog__content">
-                          <h1 class="blog__title">Vang thang long classic</h1>
-                          <div class="blog__info">
-                            <p class="blog__author">Đăng bởi Giangle</p>
-                            <p class="blog__date">30/06/2015</p>
-                            <p class="blog__comment">60 bình luận</p>
-                          </div>
-                          <p class="blog__description">Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...</p><a class="blog__link" href="#">Read more</a>
-                        </div>
-                      </div>
-                      <div class="blog__item">
-                        <div class="blog__container-img"><img class="blog__img" src="../dist/images/blog-1.jpg" alt="img">
-                          <div class="blog__hover"><img class="blog__hover-img" src="../dist/images/icon-link.png" alt="hover"></div>
-                        </div>
-                        <div class="blog__content">
-                          <h1 class="blog__title">Vang thang long classic</h1>
-                          <div class="blog__info">
-                            <p class="blog__author">Đăng bởi Giangle</p>
-                            <p class="blog__date">30/06/2015</p>
-                            <p class="blog__comment">60 bình luận</p>
-                          </div>
-                          <p class="blog__description">Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...</p><a class="blog__link" href="#">Read more</a>
-                        </div>
-                      </div>
+            <div class="login__content">
+              <div class="login__top">
+                <h1 class="product__title arrow">Đăng nhập</h1><a class="button__click">Đăng ký</a>
+              </div>
+              <form class="login__form" action="#">
+                <div class="login__title">
+                  <h1 class="login__title-text">Khách hàng đăng nhập</h1>
+                  <p class="login__description">Nếu bạn có một tài khoản, xin vui lòng đăng nhập</p>
+                </div>
+                <div class="login__input">
+                  <label for="email">Email<sup>*</sup></label>
+                  <input class="login__input-text" type="emmail" id="email">
+                </div>
+                <div class="login__input">
+                  <label for="email">Password<sup>*</sup></label>
+                  <input class="login__input-text" type="emmail" id="email">
+                </div>
+                <div class="login__input">
+                  <label></label>
+                  <div class="forgot__passs">
+                    <input class="login__forgot-pass" type="checkbox" name="forgot-pass">
+                    <label class="login__forgot-text" for="#">Quên mật khẩu</label>
+                  </div>
+                </div>
+                <div class="login__input">
+                  <label></label>
+                  <div class="login__button"><a class="button__click">Đăng nhập</a></div>
+                </div>
+              </form>
             </div>
           </div>
         </article>

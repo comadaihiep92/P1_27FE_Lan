@@ -77,6 +77,8 @@ button { outline: none; }
   font-size: 1.2rem;
   background: $color-black;
   color: $color-white;
+  cursor: pointer;
+  border: none;
 }
 
 .product__title.arrow {

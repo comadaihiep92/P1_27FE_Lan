@@ -1,0 +1,29 @@
+// product cart
+include ../utils/mixins
+
+article.address
+    .container
+        +pageIndex(
+            wineRed
+        )
+        
+        h1.product__title.arrow Địa chỉ
+        .address__content
+            .address__left
+                h1.address__title Địa chỉ của bạn
+                +addressPerson(
+                    addressList,
+                    "yes"
+                )
+                +addressPerson(
+                    addressList
+                )
+                +addressPerson(
+                    addressList
+                )
+            .address__right
+                a(href="#").button__edit-blue Địa chỉ của bạn
+                +addressPerson(
+                    addressList,
+                    "yes"
+                )

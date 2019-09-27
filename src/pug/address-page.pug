@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+	- var title = 'Address'
+	- var pageClass = 'address-page'
+
+block append header
+	include modules/header/slide
+
+block content
+	include pages/address
+	include pages/brand

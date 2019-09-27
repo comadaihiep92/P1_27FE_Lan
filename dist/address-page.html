@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Product Cart</title><!--[if IE]>
+    <title>Address</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
     <link rel="stylesheet" type="text/css" href="../dist/css/styles.css"><!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
   </head>
-  <body class="product-cart-page">
+  <body class="address-page">
     <div class="wrapper">
       <header class="header">
         <div class="slide__background"></div>
@@ -93,7 +93,7 @@
       </header>
       <section class="content">
         <!-- product cart-->
-        <article class="product__array-cart">
+        <article class="address">
           <div class="container">
                     <div class="page__index">
                       <ul>
@@ -102,103 +102,185 @@
                         <li><a href="#3">Rượu vang đỏ</a></li>
                       </ul>
                     </div>
-            <div class="product__cart">
-              <h1 class="product__title arrow">Giỏ hàng</h1>
-              <div class="cart__list">
-                <div class="cart__item">
-                  <div class="cart__container">
-                    <p class="cart__title">Ảnh</p>
-                  </div>
-                  <div class="cart__container">
-                    <p class="cart__title">Tên sản phẩm</p>
-                  </div>
-                  <div class="cart__container">
-                    <p class="cart__title">Giá</p>
-                  </div>
-                  <div class="cart__container">
-                    <p class="cart__title">Số lượng</p>
-                  </div>
-                  <div class="cart__container">
-                    <p class="cart__title">Tổng số</p>
-                  </div>
-                  <div class="cart__container">
-                    <p class="cart__title">Xóa</p>
-                  </div>
-                </div>
-                        <div class="cart__item">
-                          <div class="cart__container">
-                            <div class="product__container-img"><img class="product__image" src="../dist/images/product-new-1.jpg" alt="img"></div>
+            <h1 class="product__title arrow">Địa chỉ</h1>
+            <div class="address__content">
+              <div class="address__left">
+                <h1 class="address__title">Địa chỉ của bạn</h1>
+                        <div class="contact__item">
+                          <div class="contact__input">
+                            <label class="contact__label" for="firstname">Tên</label>
+                            <input class="login__input-text" type="text" id="firstname" value="Giang">
                           </div>
-                          <div class="cart__container">
-                            <h1 class="product__title line">Rượu vang Đà Lạt</h1>
+                          <div class="contact__input">
+                            <label class="contact__label" for="lastname">Họ & tên đệm</label>
+                            <input class="login__input-text" type="text" id="lastname" value="Lê Anh">
                           </div>
-                          <div class="cart__container">
-                            <p class="product__price product__discount line">345.000<sup class="product__unit">đ</sup></p>
+                          <div class="contact__input">
+                            <label class="contact__label" for="company">Công ty</label>
+                            <input class="login__input-text" type="text" id="company" value="Cổ phần công nghệ DKT">
                           </div>
-                          <div class="cart__container">
-                            <input class="cart__quantity line" type="text" value="1" name="quantity">
+                          <div class="contact__input">
+                            <label class="contact__label" for="address">Địa chỉ</label>
+                            <input class="login__input-text" type="text" id="address" value="Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội">
                           </div>
-                          <div class="cart__container">
-                            <p class="product__price product__discount line">345.000<sup class="product__unit">đ</sup></p>
+                          <div class="contact__input">
+                            <label class="contact__label" for="city">Thành phố</label>
+                            <input class="login__input-text" type="text" id="city" value="Hà Nội">
                           </div>
-                          <div class="cart__container"><img class="product__delete line" src="../dist/images/icon-delete.png" alt="img delete"></div>
+                          <div class="contact__input">
+                            <label class="contact__label" for="nationality">Quốc tịch</label>
+                            <input class="login__input-text" type="text" id="nationality" value="Việt Nam">
+                          </div>
+                          <div class="contact__input">
+                            <label class="contact__label" for="zipcode">Postal/Zip Code</label>
+                            <input class="login__input-text" type="emmail" id="zipcode" value="2300089">
+                          </div>
+                          <div class="contact__input">
+                            <label class="contact__label" for="phone">Phone</label>
+                            <input class="login__input-text" type="text" id="phone" value="0974554928">
+                          </div>
+                          <div class="contact__input">
+                            <label></label>
+                            <div class="forgot__passs">
+                              <input class="login__forgot-pass" type="checkbox" name="forgot-pass">
+                              <label class="login__forgot-text" for="#">Đặt làm địa chỉ mặc định</label>
+                            </div>
+                          </div>
+                          <div class="contact__input">
+                            <label></label>
+                            <div class="contact__button">
+                              <input class="button__click button__edit" type="submit" value="Chỉnh sửa địa chỉ">
+                              <input class="button__click button__delete" type="submit" value="Xóa">
+                            </div>
+                          </div>
                         </div>
-                        <div class="cart__item">
-                          <div class="cart__container">
-                            <div class="product__container-img"><img class="product__image" src="../dist/images/product-new-2.jpg" alt="img"></div>
+                        <div class="contact__item">
+                          <div class="contact__input">
+                            <label class="contact__label" for="firstname">Tên</label>
+                            <label class="contact__label">Giang</label>
                           </div>
-                          <div class="cart__container">
-                            <h1 class="product__title line">Rượu vang Đà Lạt</h1>
+                          <div class="contact__input">
+                            <label class="contact__label" for="lastname">Họ & tên đệm</label>
+                            <label class="contact__label">Lê Anh</label>
                           </div>
-                          <div class="cart__container">
-                            <p class="product__price product__discount line">400.000<sup class="product__unit">đ</sup></p>
+                          <div class="contact__input">
+                            <label class="contact__label" for="company">Công ty</label>
+                            <label class="contact__label">Cổ phần công nghệ DKT</label>
                           </div>
-                          <div class="cart__container">
-                            <input class="cart__quantity line" type="text" value="1" name="quantity">
+                          <div class="contact__input">
+                            <label class="contact__label" for="address">Địa chỉ</label>
+                            <label class="contact__label">Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội</label>
                           </div>
-                          <div class="cart__container">
-                            <p class="product__price product__discount line">345.000<sup class="product__unit">đ</sup></p>
+                          <div class="contact__input">
+                            <label class="contact__label" for="city">Thành phố</label>
+                            <label class="contact__label">Hà Nội</label>
                           </div>
-                          <div class="cart__container"><img class="product__delete line" src="../dist/images/icon-delete.png" alt="img delete"></div>
+                          <div class="contact__input">
+                            <label class="contact__label" for="nationality">Quốc tịch</label>
+                            <label class="contact__label">Việt Nam</label>
+                          </div>
+                          <div class="contact__input">
+                            <label class="contact__label" for="subject">Postal/Zip Code</label>
+                            <label class="contact__label">2300089</label>
+                          </div>
+                          <div class="contact__input">
+                            <label class="contact__label" for="phone">Phone</label>
+                            <label class="contact__label">0974554928</label>
+                          </div>
+                          <div class="contact__input">
+                            <label></label>
+                            <div class="address__edit"><a class="login__forgot-text button__edit-blue">Chỉnh sửa địa chỉ </a></div>
+                          </div>
                         </div>
-                        <div class="cart__item">
-                          <div class="cart__container">
-                            <div class="product__container-img"><img class="product__image" src="../dist/images/product-new-1.jpg" alt="img"></div>
+                        <div class="contact__item">
+                          <div class="contact__input">
+                            <label class="contact__label" for="firstname">Tên</label>
+                            <label class="contact__label">Giang</label>
                           </div>
-                          <div class="cart__container">
-                            <h1 class="product__title line">Rượu vang Đà Lạt</h1>
+                          <div class="contact__input">
+                            <label class="contact__label" for="lastname">Họ & tên đệm</label>
+                            <label class="contact__label">Lê Anh</label>
                           </div>
-                          <div class="cart__container">
-                            <p class="product__price product__discount line">345.000<sup class="product__unit">đ</sup></p>
+                          <div class="contact__input">
+                            <label class="contact__label" for="company">Công ty</label>
+                            <label class="contact__label">Cổ phần công nghệ DKT</label>
                           </div>
-                          <div class="cart__container">
-                            <input class="cart__quantity line" type="text" value="1" name="quantity">
+                          <div class="contact__input">
+                            <label class="contact__label" for="address">Địa chỉ</label>
+                            <label class="contact__label">Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội</label>
                           </div>
-                          <div class="cart__container">
-                            <p class="product__price product__discount line">345.000<sup class="product__unit">đ</sup></p>
+                          <div class="contact__input">
+                            <label class="contact__label" for="city">Thành phố</label>
+                            <label class="contact__label">Hà Nội</label>
                           </div>
-                          <div class="cart__container"><img class="product__delete line" src="../dist/images/icon-delete.png" alt="img delete"></div>
-                        </div>
-                        <div class="cart__item">
-                          <div class="cart__container">
-                            <div class="product__container-img"><img class="product__image" src="../dist/images/product-new-2.jpg" alt="img"></div>
+                          <div class="contact__input">
+                            <label class="contact__label" for="nationality">Quốc tịch</label>
+                            <label class="contact__label">Việt Nam</label>
                           </div>
-                          <div class="cart__container">
-                            <h1 class="product__title line">Rượu vang Đà Lạt</h1>
+                          <div class="contact__input">
+                            <label class="contact__label" for="subject">Postal/Zip Code</label>
+                            <label class="contact__label">2300089</label>
                           </div>
-                          <div class="cart__container">
-                            <p class="product__price product__discount line">400.000<sup class="product__unit">đ</sup></p>
+                          <div class="contact__input">
+                            <label class="contact__label" for="phone">Phone</label>
+                            <label class="contact__label">0974554928</label>
                           </div>
-                          <div class="cart__container">
-                            <input class="cart__quantity line" type="text" value="1" name="quantity">
+                          <div class="contact__input">
+                            <label></label>
+                            <div class="address__edit"><a class="login__forgot-text button__edit-blue">Chỉnh sửa địa chỉ </a></div>
                           </div>
-                          <div class="cart__container">
-                            <p class="product__price product__discount line">345.000<sup class="product__unit">đ</sup></p>
-                          </div>
-                          <div class="cart__container"><img class="product__delete line" src="../dist/images/icon-delete.png" alt="img delete"></div>
                         </div>
               </div>
-              <div class="cart__button"><a class="button__continue button__click" href="#">Tiếp tục mua hàng</a><a class="button__delete button__click" href="#">Tiếp tục mua hàng</a><a class="button__update button__click" href="#">Tiếp tục mua hàng  </a></div>
+              <div class="address__right"><a class="button__edit-blue" href="#">Địa chỉ của bạn</a>
+                        <div class="contact__item">
+                          <div class="contact__input">
+                            <label class="contact__label" for="firstname">Tên</label>
+                            <input class="login__input-text" type="text" id="firstname" value="Giang">
+                          </div>
+                          <div class="contact__input">
+                            <label class="contact__label" for="lastname">Họ & tên đệm</label>
+                            <input class="login__input-text" type="text" id="lastname" value="Lê Anh">
+                          </div>
+                          <div class="contact__input">
+                            <label class="contact__label" for="company">Công ty</label>
+                            <input class="login__input-text" type="text" id="company" value="Cổ phần công nghệ DKT">
+                          </div>
+                          <div class="contact__input">
+                            <label class="contact__label" for="address">Địa chỉ</label>
+                            <input class="login__input-text" type="text" id="address" value="Tòa nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội">
+                          </div>
+                          <div class="contact__input">
+                            <label class="contact__label" for="city">Thành phố</label>
+                            <input class="login__input-text" type="text" id="city" value="Hà Nội">
+                          </div>
+                          <div class="contact__input">
+                            <label class="contact__label" for="nationality">Quốc tịch</label>
+                            <input class="login__input-text" type="text" id="nationality" value="Việt Nam">
+                          </div>
+                          <div class="contact__input">
+                            <label class="contact__label" for="zipcode">Postal/Zip Code</label>
+                            <input class="login__input-text" type="emmail" id="zipcode" value="2300089">
+                          </div>
+                          <div class="contact__input">
+                            <label class="contact__label" for="phone">Phone</label>
+                            <input class="login__input-text" type="text" id="phone" value="0974554928">
+                          </div>
+                          <div class="contact__input">
+                            <label></label>
+                            <div class="forgot__passs">
+                              <input class="login__forgot-pass" type="checkbox" name="forgot-pass">
+                              <label class="login__forgot-text" for="#">Đặt làm địa chỉ mặc định</label>
+                            </div>
+                          </div>
+                          <div class="contact__input">
+                            <label></label>
+                            <div class="contact__button">
+                              <input class="button__click button__edit" type="submit" value="Chỉnh sửa địa chỉ">
+                              <input class="button__click button__delete" type="submit" value="Xóa">
+                            </div>
+                          </div>
+                        </div>
+              </div>
             </div>
           </div>
         </article>
