@@ -1,0 +1,116 @@
+// order
+
+.order {
+    width: 100%;
+    height: auto;
+    &__content {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 9fr 3fr;
+        grid-template-rows: auto;
+        grid-gap: 30px;
+    }
+    &__list {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 45px auto;
+        border: 1px solid #e6e6e6;
+        color: #131313;
+        & .cart__item {
+            display: grid;
+            grid-template-columns: 1fr 2fr 2fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-gap: 0;
+            align-items: center;
+            justify-items: center;
+        }
+    
+        & .cart__title {
+            font-size: 1.2rem;
+            color: #202020;
+            text-transform: uppercase;
+        }
+        & .cart__container {
+            padding: 10px;
+            border: none;
+            border-right: 1px solid #e6e6e6;
+        }
+    }
+    &__function {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: start;
+    }
+    &__item {
+        display: grid;
+        grid-template-columns: 1fr 3fr 2fr 1fr 2fr 2fr 2fr;
+        grid-template-rows: 1fr;
+        grid-gap: 0;
+        align-items: center;
+        justify-items: center;
+        border: 1px solid #e6e6e6;
+    }
+    &__head {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 25px 15px;
+        background: #fafafa;
+        border: 1px solid #e6e6e6;
+    }
+    &__title {
+        color: #131313;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: 200;
+    }
+    &__link {
+        font-size: 1.4rem;
+        padding: 0 10px;
+        color: #131313;
+        position: relative;
+        &:not(:first-child):not(:nth-child(7))::after {
+            content: "|";
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__right {
+        width: 100%;
+        height: 275px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        padding: 25px 15px;
+        background: #fafafa;
+        border: 1px solid #e6e6e6;
+    }
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 15px 1fr;
+    grid-column-gap: 15px;
+    grid-template-rows: 1fr;
+    &__title {
+        font-size: 1.4rem;
+        color: #212121;
+    }
+}
+
+.address__link {
+    font-size: 1.6rem;
+    color: #212121;
+    text-decoration: underline;
+}

@@ -1,0 +1,35 @@
+// login
+include ../utils/mixins
+
+article.login
+    .container
+        +pageIndex(
+            wineRed
+        )
+        .login__content
+            .login__top
+                h1.product__title.arrow Đăng nhập
+                a.button__click Đăng ký
+            form(action="#").login__form
+                .login__title
+                    h1.login__title-text Khách hàng đăng nhập
+                    p.login__description Nếu bạn có một tài khoản, xin vui lòng đăng nhập
+                .login__input
+                    label(for="email") Email
+                        sup *
+                    input(type="emmail" id="email" class="login__input-text")
+                .login__input
+                    label(for="email") Password
+                        sup *
+                    input(type="emmail" id="email" class="login__input-text")
+                .login__input
+                    label
+                    .forgot__passs
+                        input(type="checkbox" name="forgot-pass" class="login__forgot-pass")
+                        label(for="#" class="login__forgot-text") Quên mật khẩu
+                .login__input
+                    label
+                    .login__button
+                        a.button__click Đăng nhập
+                
+                    

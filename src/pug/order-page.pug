@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+	- var title = 'Order'
+	- var pageClass = 'order-page'
+
+block append header
+	include modules/header/slide
+
+block content
+	include pages/order
+	include pages/brand

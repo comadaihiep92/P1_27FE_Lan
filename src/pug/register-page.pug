@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+	- var title = 'Đăng kí'
+	- var pageClass = 'register-page'
+
+block append header
+	include modules/header/slide
+
+block content
+	include pages/register
+	include pages/brand

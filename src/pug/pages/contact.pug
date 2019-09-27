@@ -1,0 +1,48 @@
+// product cart
+include ../utils/mixins
+
+article.contact
+    .container
+        +pageIndex(
+            wineRed
+        )
+        
+        h1.product__title.arrow Liên hệ
+        .contact__content
+            .contact__left
+                .contact__map
+                    img(src="../dist/images/map.jpg", alt="map")
+                .contact__item
+                    .contact__input
+                        label(for="name" class="contact__label") Your Name
+                        input(type="emmail" id="name" class="login__input-text")
+                    .contact__input
+                        label(for="email" class="contact__label") Your Mail
+                        input(type="emmail" id="email" class="login__input-text")
+                    .contact__input
+                        label(for="subject" class="contact__label") Subject
+                        input(type="emmail" id="subject" class="login__input-text")
+                    .contact__input
+                        label(for="textarea" class="contact__label") Your Message
+                        textarea(name="textarea" class="login__input-text messsage")
+                    .contact__input
+                        label
+                        .contact__button
+                            input(type="submit" value="Gửi" class="button__click button__contact")
+            .contact__right
+                .item
+                    img(src="../dist/images/logo.png", alt="")
+                .item
+                    img(src="../dist/images/icon-person.png", alt="")
+                    p.item__title GiangLe
+                        br
+                        | Leanhgian89@gmail.com
+                    img(src="../dist/images/icon-address.png", alt="")
+                    p.item__title Tòa nhà Hà Nội Group
+                        br
+                        | 442 Đội Cấn, Ba Đình Hà Nội
+                    img(src="../dist/images/icon-phone.png", alt="")
+                    p.item__title (04) 3786 8904
+                .item.row-follow
+                    h1.item__follow Follow Us:
+                    img(src="../dist/images/icon-social-list.png", alt="social")                                

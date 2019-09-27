@@ -1,0 +1,53 @@
+// register
+include ../utils/mixins
+
+article.register
+    .container
+        +pageIndex(
+            wineRed
+        )
+        .login__content
+            .login__top
+                h1.product__title.arrow Đăng ký
+                a.button__click Đăng nhập
+            form(action="#").login__form
+                .login__title
+                    h1.login__title-text Thông tin cá nhân
+                .login__input
+                    label(for="email") Tên trước
+                        sup *
+                    input(type="emmail" id="email" class="login__input-text")
+                .login__input
+                    label(for="email") Tên sau
+                        sup *
+                    input(type="emmail" id="email" class="login__input-text")
+                .login__input
+                    label(for="email") Email
+                        sup *
+                    input(type="emmail" id="email" class="login__input-text")
+                .login__input
+                    label(for="email") Password
+                        sup *
+                    input(type="emmail" id="email" class="login__input-text")
+                .login__input
+                    label
+                    .forgot__passs
+                        input(type="checkbox" name="forgot-pass" class="login__forgot-pass")
+                        label(for="#" class="login__forgot-text") Đăng kí nhận bản tin
+                .login__title
+                    h1.login__title-text Thông tin đăng nhập
+                .login__input
+                    label(for="email") Mật khẩu
+                        sup *
+                    input(type="emmail" id="email" class="login__input-text")
+                .login__input
+                    label(for="email") Xác nhận mật khẩu
+                        sup *
+                    input(type="emmail" id="email" class="login__input-text")
+                .login__input
+                    label
+                    .register__button
+                        input(type="submit" value="Gửi" class="button__click")
+                        a.button__click Quay lại
+                
+                    

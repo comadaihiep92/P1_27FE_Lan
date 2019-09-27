@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+	- var title = 'Contact'
+	- var pageClass = 'contact-page'
+
+block append header
+	include modules/header/slide
+
+block content
+	include pages/contact
+	include pages/brand
