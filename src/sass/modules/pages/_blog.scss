@@ -21,6 +21,9 @@
 .blog__item {
     width: 100%;
     height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
     &:first-child {
         margin-right: 30px;
     }
@@ -28,39 +31,52 @@
 
 .blog__container-img {
     width: 100%;
-    height: 220px;
+    height: 100%;
+    overflow: hidden;
     position: relative;
-    &:hover .blog__hover {
+    &:hover .blog__hover, &:hover .blog__hover-3  {
         visibility: visible;
     }
+    // &:hover .blog__hover-3 {
+    //     visibility: visible;
+    // }
 }
 
 .blog__hover {
-    position: absolute;
-    top: 0;
     width: 0;
     height: 0;
-    border-bottom: 220px solid rgba(217, 221, 216, 0.4);
-    border-left: 360px solid transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 230px solid rgba(217, 221, 216, 0.4);
+    border-left: 375px solid transparent;
+    position: absolute;
+    visibility: hidden;
+}
+
+.blog__hover-1 {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
+
+.blog__hover-3 {
     visibility: hidden;
 }
 
 .blog__hover-img {
     position: absolute;
-    top: 90px;
-    right: 160px;
-    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: white;
-    border: 20px solid white;
+    padding: 20px;
     border-radius: 50%;
 }
 
 
 .blog__img {
     max-width: 100%;
-    width: 100%;
-    height: 100%;
-    position: relative;
     z-index: -99;
     cursor: pointer;
     

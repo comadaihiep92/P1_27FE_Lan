@@ -119,8 +119,10 @@ mixin blog(list)
     each val, key in listBlog
         .blog__item
             .blog__container-img
-                img.blog__img(src= val.img, alt= "img")
+                .blog__hover-1
+                    img.blog__img(src= val.img, alt= "img")
                 .blog__hover
+                .blog__hover-3
                     img(src="../dist/images/icon-link.png", class="blog__hover-img" alt="hover")
             .blog__content
                 h1.blog__title= val.name
@@ -172,15 +174,15 @@ mixin dropdownMenu
                 h1.dropmenu__title Rượu ngoại
                 ul.dropmenu__container
                     li
-                        a(href="#").dropmenu__link Rượu Chivas
+                        a(href="address-page.html").dropmenu__link Rượu Chivas
                     li
-                        a(href="#").dropmenu__link Hàng độc - Rượu độc đáo
+                        a(href="blog-post.html").dropmenu__link Hàng độc - Rượu độc đáo
                     li
-                        a(href="#").dropmenu__link Johnnie Walker
+                        a(href="contact-page.html").dropmenu__link Johnnie Walker
                     li
-                        a(href="#").dropmenu__link Rượu Whisky 
+                        a(href="intro-post.html").dropmenu__link Rượu Whisky 
                     li
-                        a(href="#").dropmenu__link Rượu Remy Martin
+                        a(href="order-page.html").dropmenu__link Rượu Remy Martin
                     li
                         a(href="#").dropmenu__link Rượu Glenmorangie
             .dropmenu__item
@@ -240,17 +242,17 @@ mixin productCard(list)
                     .product__container-img
                         img.product__image(src= val.img, alt="img")
                 .cart__container
-                    h1.product__title.line= val.name
+                    h1.product__title.cart__title.line= val.name
                 .cart__container
                     p.product__price.product__discount.line= val.price
                         |
-                        sup.product__unit= val.unit
+                        sup.product__unit.unit= val.unit
                 .cart__container
-                    input(type="text" value= val.quantity name="quantity" class="cart__quantity line")
+                    input(type="text" value= val.quantity name="quantity" class="cart__quantity line cart__title")
                 .cart__container
                     p.product__price.product__discount.line= val.sum
                         |
-                        sup.product__unit= val.unit
+                        sup.product__unit.unit= val.unit
                 .cart__container
                     img.product__delete.line(src= "../dist/images/icon-delete.png", alt="img delete")
 
@@ -296,7 +298,7 @@ mixin orderButton(list)
 mixin blog2(list)
     - var listBlog= list
     - var count = 0
-    - var n = 3
+    - var n = 'all'
     each val, key in listBlog
         case n
             when 'all'

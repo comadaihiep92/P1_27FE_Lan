@@ -29,7 +29,7 @@
     width: 100%;
     height: auto;
     &__content {
-        width: 945px;
+        width: 100%;
         text-align: center;
         margin: 0 auto;
     }
@@ -38,7 +38,7 @@
         height: auto;
         display: inline-block;
         margin: 20px 0;
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 22px;
         color: $color-gray;
     }
@@ -105,7 +105,7 @@
     } 
     & .product__title {
         margin-top: 0;
-        font-size: 24px;
+        font-size: 2.4rem;
         &:first-child::after {
             content: url(../images/border-bottom-2.png);
             display: block;
@@ -115,12 +115,12 @@
         font-family: $font-sale;
         margin-top: 35px;
         color: $color-yellow;
-        font-size: 34px;
+        font-size: 3.4rem;
     }
     & .product__description {
         margin-top: 25px;
         color: $color-gray;
-        font-size: 13px;
+        font-size: 1.3rem;
         line-height: 18px;
     }
 
@@ -153,11 +153,11 @@
         }
     }
     &-title {
-        font-size: 34px;
+        font-size: 3.4rem;
         font-family: $font-sale;
     }
     &-des {
-        font-size: 14px;
+        font-size: 1.4rem;
         text-transform: uppercase;
     }
 }

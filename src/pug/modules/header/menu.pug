@@ -2,6 +2,9 @@ include ../../utils/mixins
 // menu
 nav.menu
     img(src="../dist/images/logo.png", alt="logo" class="menu__logo")
+    label(for="drop" class="toggle") 
+        i(class="fas fa-bars")
+    input(type="checkbox" id="drop")
     +menu(
         menuList,
         "menu__list",

@@ -21,6 +21,7 @@
         visibility: visible;
     }
     &:hover .product__grid-link {
+        
         border: 3px solid $color-yellow;
     }
 }
@@ -46,5 +47,14 @@
 }
 
 .product__grid-title {
+    max-width: 100%;
     visibility: hidden;
+}
+
+@media (max-width: 767.98px) { 
+    .product__grid-list {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
 }

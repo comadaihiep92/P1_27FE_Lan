@@ -4,6 +4,9 @@
 
     & .login__form {
         height: 625px;
+        & label {
+            font-size: 1.4rem;
+        }
     }
     & .login__title-text {
         margin: 0;
